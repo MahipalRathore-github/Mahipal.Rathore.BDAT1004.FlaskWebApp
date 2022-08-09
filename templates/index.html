@@ -14,37 +14,30 @@
 
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">All Cryptocurrencies</a>
+      <a class="navbar-brand" href="http://34.171.28.83:5000/currency">Graph</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="http://34.171.28.83:5000/googleTable">Variance</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Crypto trends
+              Data From Mongo Using API
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="http://34.171.28.83:5000/api/currency-pairs">Crypto-Pairs</a></li>
+              <li><a class="dropdown-item" href="http://34.171.28.83:5000/api/currencies?page=1&limit=10&paid=BTCUSDT">API-Data</a></li>
+              <li><a class="dropdown-item" href="http://34.171.28.83:5000/api/allcurrencies">All-Data</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Graphs</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        
       </div>
     </div>
   </nav>
@@ -63,11 +56,8 @@
                         <thead class="mdb-color darken-3">
                             <tr class="text-black">
                                 <th>#</th>
-                                <th>Currency</th>
-                                <th>Open Price</th>
-                                <th>High Price</th>
-                                <th>Low Price</th>
-                                <th>Volume</th>
+                                <th>Functionaly</th>
+                                <th>Descritption</th>
                             </tr>
                         </thead>
                         <!--Table head-->
@@ -75,12 +65,29 @@
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>{{ variable }}</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>USA</td>
-                                <td>New York</td>
-                            </tr>
+                                <td>Graph: </td>
+                                <td>Pie chart to visualize curriencies with top Average Volume
+                                </td>
+                            </tr>             
+                            <th scope="row">2</th>
+                            <td>Variance                                                                                    </td>
+                            <td>It depicts the currency,high price and low price. 
+                                It also show the variance which is defference between high and low price</td>
+                        </tr>    
+                        <th scope="row">3</th>
+                        <td>API-Crypto-Pairs</td>
+                        <td>It provide all currency exchane pairs from the data through API using MongoDB as source database </td>
+                    </tr>    
+                  </tr>    
+                  <th scope="row">4</th>
+                  <td>API-Data</td>
+                  <td>It provide additional functionality to limit the data while fetching it from through API using pagination </td>
+              </tr>       
+            </tr>    
+            <th scope="row">5</th>
+            <td>API-All-Data</td>
+            <td>It provide all data through API using MongoDB as source database </td>
+        </tr>            
                         </tbody>
                         <!--Table body-->
                     </table>
@@ -92,5 +99,4 @@
         <!--MDB Tables-->
       
     </main>
-  
-</body> 
+  </body> 
